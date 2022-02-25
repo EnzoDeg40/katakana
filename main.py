@@ -11,11 +11,13 @@ while True :
     
     if(r == "q"):
         break
-
-    if(r == 'a' or r == 'i'):
+    else:
         # Read file
-        f = open("db/" + r, encoding="UTF-8")
-        content = f.read().split('\n')
+        try:
+            f = open("db/" + r, encoding="UTF-8")
+            content = f.read().split('\n')
+        except:
+            continue
 
         for i in range(10):
             try:
